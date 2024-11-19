@@ -1,0 +1,73 @@
+managed implementation in class ZCL_R_TB_EINVOICE unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TB_EINVOICE alias eInvoice
+persistent table ztb_einvoice
+draft table ztb_einvoice_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( readonly )
+  Uuid,
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  field ( numbering : managed )
+  Uuid;
+
+
+  create;
+  update;
+  delete;
+
+  static action ( features : global ) get_eInvoice parameter ZA_EINVOICE_NO result [1] $self;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action ( features : instance ) Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ztb_einvoice
+    {
+      Uuid               = uuid;
+      Stax               = stax;
+      Sid                = sid;
+      eFormat            = eformat;
+      Action             = action;
+      Company            = company;
+      DocIc              = doc_ic;
+      DocId              = doc_id;
+      DocOn              = doc_on;
+      DocOt              = doc_ot;
+      DocOu              = doc_ou;
+      DocUc              = doc_uc;
+      DocAdt             = doc_adt;
+      DocAun             = doc_aun;
+      DocIdt             = doc_idt;
+      OrgOn              = org_on;
+      OrgOt              = org_ot;
+      OrgAcc             = org_acc;
+      OrgAdd             = org_add;
+      OrgSeq             = org_seq;
+      OrgTel             = org_tel;
+      OrgAddr            = org_addr;
+      OrgBank            = org_bank;
+      OrgMail            = org_mail;
+      OrgPaxo            = org_paxo;
+      OrgSign            = org_sign;
+      OrgTaxo            = org_taxo;
+      OrgPaxoname        = org_paxoname;
+      OrgTaxoname        = org_taxoname;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}

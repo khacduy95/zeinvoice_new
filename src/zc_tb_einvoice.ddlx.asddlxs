@@ -1,0 +1,509 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Uuid'
+@UI.headerInfo.title.label: 'eInvoice Information'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Uuid'
+@EndUserText.label: 'eInvoice information'
+annotate view ZC_TB_EINVOICE with
+{
+  @EndUserText.label: 'Uuid'
+  @UI.facet: [ {
+    label: 'Document data',
+    id: 'docData',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'docData'
+  },
+
+  {
+    label: 'Org data',
+    id: 'orgData',
+    purpose: #STANDARD,
+    position: 20 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'orgData'
+  }
+
+   ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @UI.hidden: true
+  Uuid;
+
+  @EndUserText.label: 'Stax'
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  }, { type: #FOR_ACTION, dataAction: 'get_eInvoice', label: 'get eInvoice', invocationGrouping: #CHANGE_SET } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+
+  @UI.fieldGroup: [{
+      qualifier: 'docData',
+      position: 10
+  }]
+  Stax;
+
+  @EndUserText.label: 'Sid'
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+
+  @UI.fieldGroup: [{
+      qualifier: 'docData',
+      position: 20
+  }]
+  Sid;
+
+  @EndUserText.label: 'Format'
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+
+  @UI.fieldGroup: [{
+      qualifier: 'docData',
+      position: 30
+  }]
+  eFormat;
+
+  @EndUserText.label: 'Action'
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+
+  @UI.fieldGroup: [{
+      qualifier: 'docData',
+      position: 40
+  }]
+  Action;
+
+  @EndUserText.label: 'Company'
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+
+  @UI.fieldGroup: [{
+      qualifier: 'docData',
+      position: 50
+  }]
+  Company;
+
+  @EndUserText.label: 'Doc Ic'
+  @UI.identification: [ {
+    position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 60
+}]
+  DocIc;
+
+  @EndUserText.label: 'Doc Id'
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 70
+}]
+  DocId;
+
+  @EndUserText.label: 'Doc On'
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 80
+}]
+  DocOn;
+
+  @EndUserText.label: 'Doc Ot'
+  @UI.identification: [ {
+    position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100
+  } ]
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 90
+}]
+  DocOt;
+
+  @EndUserText.label: 'Doc Ou'
+  @UI.identification: [ {
+    position: 110
+  } ]
+  @UI.lineItem: [ {
+    position: 110
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 100
+}]
+  DocOu;
+
+  @EndUserText.label: 'Doc Uc'
+  @UI.identification: [ {
+    position: 120
+  } ]
+  @UI.lineItem: [ {
+    position: 120
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 110
+}]
+  DocUc;
+
+  @EndUserText.label: 'Doc Adt'
+  @UI.identification: [ {
+    position: 130
+  } ]
+  @UI.lineItem: [ {
+    position: 130
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 120
+}]
+  DocAdt;
+
+  @EndUserText.label: 'Doc Aun'
+  @UI.identification: [ {
+    position: 140
+  } ]
+  @UI.lineItem: [ {
+    position: 140
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 130
+}]
+  DocAun;
+
+  @EndUserText.label: 'Doc Idt'
+  @UI.identification: [ {
+    position: 150
+  } ]
+  @UI.lineItem: [ {
+    position: 150
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'docData',
+    position: 140
+}]
+  DocIdt;
+
+  @EndUserText.label: 'Org On'
+  @UI.identification: [ {
+    position: 160
+  } ]
+  @UI.lineItem: [ {
+    position: 160
+  } ]
+
+  @UI.fieldGroup: [{
+    qualifier: 'orgData',
+    position: 10
+}]
+  OrgOn;
+
+  @EndUserText.label: 'Org Ot'
+  @UI.identification: [ {
+    position: 170
+  } ]
+  @UI.lineItem: [ {
+    position: 170
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 20
+  }]
+  OrgOt;
+
+  @EndUserText.label: 'Org Acc'
+  @UI.identification: [ {
+    position: 180
+  } ]
+  @UI.lineItem: [ {
+    position: 180
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 30
+  }]
+  OrgAcc;
+
+  @EndUserText.label: 'Org Add'
+  @UI.identification: [ {
+    position: 190
+  } ]
+  @UI.lineItem: [ {
+    position: 190
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 40
+  }]
+  OrgAdd;
+
+  @EndUserText.label: 'Org Seq'
+  @UI.identification: [ {
+    position: 200
+  } ]
+  @UI.lineItem: [ {
+    position: 200
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 50
+  }]
+  OrgSeq;
+
+  @EndUserText.label: 'Org Tel'
+  @UI.identification: [ {
+    position: 210
+  } ]
+  @UI.lineItem: [ {
+    position: 210
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 60
+  }]
+  OrgTel;
+
+  @EndUserText.label: 'Org Addr'
+  @UI.identification: [ {
+    position: 220
+  } ]
+  @UI.lineItem: [ {
+    position: 220
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 70
+  }]
+  OrgAddr;
+
+  @EndUserText.label: 'Org Bank'
+  @UI.identification: [ {
+    position: 230
+  } ]
+  @UI.lineItem: [ {
+    position: 230
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 80
+  }]
+  OrgBank;
+
+  @EndUserText.label: 'Org Mail'
+  @UI.identification: [ {
+    position: 240
+  } ]
+  @UI.lineItem: [ {
+    position: 240
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 90
+  }]
+  OrgMail;
+
+  @EndUserText.label: 'Org Paxo'
+  @UI.identification: [ {
+    position: 250
+  } ]
+  @UI.lineItem: [ {
+    position: 250
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 100
+  }]
+  OrgPaxo;
+
+  @EndUserText.label: 'Org Sign'
+  @UI.identification: [ {
+    position: 260
+  } ]
+  @UI.lineItem: [ {
+    position: 260
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 110
+  }]
+  OrgSign;
+
+  @EndUserText.label: 'Org Taxo'
+  @UI.identification: [ {
+    position: 270
+  } ]
+  @UI.lineItem: [ {
+    position: 270
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 120
+  }]
+  OrgTaxo;
+
+  @EndUserText.label: 'Org Paxoname'
+  @UI.identification: [ {
+    position: 280
+  } ]
+  @UI.lineItem: [ {
+    position: 280
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 130
+  }]
+  OrgPaxoname;
+
+  @EndUserText.label: 'Org Taxoname'
+  @UI.identification: [ {
+    position: 290
+  } ]
+  @UI.lineItem: [ {
+    position: 290
+  } ]
+
+  @UI.fieldGroup: [{
+  qualifier: 'orgData',
+  position: 140
+  }]
+  OrgTaxoname;
+
+  @UI.identification: [ {
+    position: 300 ,
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 300 ,
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 300
+  } ]
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 310 ,
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 ,
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 310
+  } ]
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.identification: [ {
+    position: 320 ,
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 ,
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 320
+  } ]
+  @UI.hidden: true
+  LocalLastChangedBy;
+
+  @UI.identification: [ {
+    position: 330 ,
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 ,
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 330
+  } ]
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 340 ,
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 340 ,
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 340
+  } ]
+  @UI.hidden: true
+  LastChangedAt;
+}

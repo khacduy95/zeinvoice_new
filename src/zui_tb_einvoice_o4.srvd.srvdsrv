@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TB_EINVOICE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TB_EINVOICE'
+  }
+}
+define service ZUI_TB_EINVOICE_O4 provider contracts odata_v4_ui {
+  expose ZC_TB_EINVOICE as eInvoice;
+}
